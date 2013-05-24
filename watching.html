@@ -1,0 +1,25 @@
+<head>
+  <title>watching</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="circle_container">
+		<div class="circle c1"></div>
+		<div class="circle c2" id="notifier"></div>
+		<div class="circle c3"></div>
+		{{> show_counter}}
+	</div>
+     <div class="copyright">
+        Powered by <a href="http://meteor.com" title="Built with sMeteor" >meteor.com</a>
+        <span>2013 © <a href="http://iaarchiver.net">ia_archiver</a></span>
+      </div>
+</body>
+
+<template name="show_counter">
+    {{#if isReady}}
+    <div id="counter">{{count}}</div>
+    {{else}}
+    <div id="counter" class="loading">Loading</div>
+    {{/if}}
+</template>
